@@ -124,6 +124,29 @@
     <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#HighRiskRoom -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#HighRiskRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#securedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartLock"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasSafetyDevice"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
     </owl:Class>
     
@@ -143,6 +166,25 @@
     <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#MeetingRoom">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OfficeRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OccupiedRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OccupiedRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#occupiedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
     </owl:Class>
     
 
