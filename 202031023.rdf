@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023/"
+     xml:base="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologies="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#adjacentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#adjacentTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#containsRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#containsRoom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Building"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasSafetyDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasSafetyDevice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#occupiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#occupiedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#securedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#securedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartLock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Building -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Building">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#HighRiskRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#HighRiskRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#ServerRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#MeetingRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#MeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OfficeRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OfficeRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OfficeRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SafeRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SafeRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasSafetyDevice"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#hasSafetyDevice"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#ServerRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#ServerRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Room"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartLock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartLock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Vistor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Vistor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#John -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#John">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Employee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartOffice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartOffice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Building"/>
+        <ontologies:containsRoom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#kitchen1"/>
+        <ontologies:containsRoom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#meetingRoom1"/>
+        <ontologies:containsRoom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#office1"/>
+        <ontologies:containsRoom rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#serverRoom1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#andy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#andy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Vistor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#FireAlarm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#kitchen1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#kitchen1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#Kitchen"/>
+        <ontologies:adjacentTo rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#serverRoom1"/>
+        <ontologies:hasSafetyDevice rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm1"/>
+        <ontologies:hasSafetyDevice rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#meetingRoom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#meetingRoom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#MeetingRoom"/>
+        <ontologies:adjacentTo rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#kitchen1"/>
+        <ontologies:occupiedBy rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#andy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#office1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#office1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#OfficeRoom"/>
+        <ontologies:adjacentTo rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#meetingRoom1"/>
+        <ontologies:occupiedBy rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#John"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#serverRoom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#serverRoom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#ServerRoom"/>
+        <ontologies:hasSafetyDevice rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#fireAlarm2"/>
+        <ontologies:hasSafetyDevice rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector2"/>
+        <ontologies:securedBy rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smartLock1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smartLock1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smartLock1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmartLock"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#smokeDetector2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cipriano/ontologies/2026/5/202031023#SmokeDetector"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
